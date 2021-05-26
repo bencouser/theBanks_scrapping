@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="united_kingdom_scrape" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="941,4084" sap2010:WorkflowViewState.IdRef="united_kingdom_scrape_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="united_kingdom_scrape" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1028,3164" sap2010:WorkflowViewState.IdRef="united_kingdom_scrape_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
       <x:String>System.Activities</x:String>
@@ -77,7 +77,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="united_kingdom_scrape" sap:VirtualizedContainerService.HintSize="872,4019" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="united_kingdom_scrape" sap:VirtualizedContainerService.HintSize="1038,3099" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
     </Sequence.Variables>
@@ -86,7 +86,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="830,775" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="996,775" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -135,7 +135,7 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table - Bank Type" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="830,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table - Bank Type" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="996,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="32">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -330,14 +330,14 @@
         </scg:List>
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
-    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Number" DataTable="[ExtractDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="830,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="830,2522" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Number" DataTable="[ExtractDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="996,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="996,1602" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="724,2402" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="962,1482" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="name" />
             </Sequence.Variables>
@@ -346,7 +346,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <Assign sap:VirtualizedContainerService.HintSize="682,60" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="920,60" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[name]</OutArgument>
               </Assign.To>
@@ -354,31 +354,31 @@
                 <InArgument x:TypeArguments="x:String">[row.item(0).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="682,2210" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
+            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="920,1290" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="648,2109" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="886,1189" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="606,2017" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="844,1097" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="564,1925" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ef7f2712c8df829a180a14536fbbb9a3" Selector="&lt;html app='chrome.exe' title='List of Banks in the United Kingdom' /&gt;">
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="802,1005" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ef7f2712c8df829a180a14536fbbb9a3" Selector="&lt;html app='chrome.exe' title='List of Banks in the United Kingdom' /&gt;">
                         <ui:BrowserScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="530,1779" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,859" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="url" />
                               </Sequence.Variables>
@@ -387,7 +387,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click On Bank" sap:VirtualizedContainerService.HintSize="488,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
+                              <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click On Bank" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_1" KeyModifiers="None" MouseButton="BTN_LEFT" SendWindowMessages="False" SimulateClick="True">
                                 <ui:Click.CursorPosition>
                                   <ui:CursorPosition OffsetX="148" OffsetY="10" Position="TopLeft" />
                                 </ui:Click.CursorPosition>
@@ -399,85 +399,68 @@
                                   </ui:Target>
                                 </ui:Click.Target>
                               </ui:Click>
-                              <uix:NApplicationCard AttachMode="ByInstance" DisplayName="Use Browser Chrome " sap:VirtualizedContainerService.HintSize="488,1395" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="Simulate" Version="V1">
-                                <uix:NApplicationCard.Body>
-                                  <ActivityAction x:TypeArguments="x:Object">
+                              <ui:Click AlterIfDisabled="{x:Null}" CursorMotionType="{x:Null}" DelayBefore="{x:Null}" DelayMS="{x:Null}" SendWindowMessages="{x:Null}" SimulateClick="{x:Null}" ClickType="CLICK_SINGLE" ContinueOnError="True" DisplayName="Click  Bank Identifiers" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="Click_3" KeyModifiers="None" MouseButton="BTN_LEFT">
+                                <ui:Click.CursorPosition>
+                                  <ui:CursorPosition Position="Center">
+                                    <ui:CursorPosition.OffsetX>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetX>
+                                    <ui:CursorPosition.OffsetY>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:CursorPosition.OffsetY>
+                                  </ui:CursorPosition>
+                                </ui:Click.CursorPosition>
+                                <ui:Click.Target>
+                                  <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="23c24add-e946-42b9-8716-1d60f8d72fa0" InformativeScreenshot="55b8f5b793fbe7f30c63c15f81de0a2b" Selector="&lt;webctrl aaname='Bank Identifiers' parentid='overview' tag='A' /&gt;">
+                                    <ui:Target.TimeoutMS>
+                                      <InArgument x:TypeArguments="x:Int32" />
+                                    </ui:Target.TimeoutMS>
+                                    <ui:Target.WaitForReady>
+                                      <InArgument x:TypeArguments="ui:WaitForReady" />
+                                    </ui:Target.WaitForReady>
+                                  </ui:Target>
+                                </ui:Click.Target>
+                              </ui:Click>
+                              <ui:AnchorBase AnchorPosition="Left" ContinueOnError="True" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                                <ui:AnchorBase.Action>
+                                  <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
-                                      <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                      <DelegateInArgument x:TypeArguments="ui:Anchor" Name="ContextAnchor" />
                                     </ActivityAction.Argument>
-                                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="454,1179" sap2010:WorkflowViewState.IdRef="Sequence_10">
-                                      <Sequence.Variables>
-                                        <Variable x:TypeArguments="x:String" Name="companyNumber" />
-                                      </Sequence.Variables>
-                                      <sap:WorkflowViewStateService.ViewState>
-                                        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                        </scg:Dictionary>
-                                      </sap:WorkflowViewStateService.ViewState>
-                                      <uix:NGetText ContinueOnError="True" DisplayName="Get Text Company Number" sap:VirtualizedContainerService.HintSize="412,166" sap2010:WorkflowViewState.IdRef="NGetText_2">
-                                        <uix:NGetText.Target>
-                                          <uix:TargetAnchorable BrowserURL="https://thebanks.eu/banks/14476" DesignTimeRectangle="971, 765, 86, 24" ElementType="Text" FriendlyName="'BR000356'" FullSelectorArgument="&lt;webctrl aaname='BR000356' parentid='overview' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='overview' tag='SPAN' type='' /&gt;" InformativeScreenshot="3f36d2fb074c82c02c6a98ae28fe548c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bangkok Bank Public Company Ltd (United Kingdom) - Bank Profile' /&gt;" SearchSteps="FuzzySelector">
-                                            <uix:TargetAnchorable.Anchors>
-                                              <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                                                <uix:Target DesignTimeRectangle="971, 734, 738, 19" FriendlyName="'Company Number'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h5' idx='2' tag='H5' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h5' type='' tag='H5' aaname='Company Number' check:text='Company Number' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAuYAAAAXCAYAAABHyIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVHhe7dtLbuNADAXAOYvvf8cEvSDA0P2TYo8VuwoQIJGvqYGSBbOYf18AAMDLWcwBAOACLOYAAHABFnMAALgAizkAAFzAdDG/3W4/Lp5j5/u++vv7HQAAeK7uYh5LWF7EejUeY+e7vvq7+9kDADzX3WK+WsAsaI8X33T13V9p9e8DAOB3uov5ymxJi95OJt/nWpj1mlzPuVzvGWXzfdPr5Vro1bLd/iyX67NcM8rGfa6FWa/J9ZzL9Z6dbK6PMgAA7+7HYv6bpah3djQv6rN87TWjfFxZr9bMsrXXqzWj2sis1+R5o2yu53xPL1vzuVZ7zSgfV9arNbvZqNU6AMAnuVvMz1gtVbU3yx/pzbLNM/O72VE9q5nRnFDz1W72SG+Wbc7kwyoLAPAJHraYz9T+ahHb7a3mNDU/U+fV56r2etnZ+VDfU5+bVT87m62OzGlqfubobACAd/ffFvOcqc/Vbm81p6n5mTqvPle118vOzofee2bPvXx2NlsdmdPU/MzR2QAA785intR59bmqvd75HfVcGM0a5cPZbHVkTtPLz65QnwEAPtGp//xZc6szvfzszG5vNaep+Zk6rz5XvV49v2P0nlzP/VE+nM1WR+Y0Nb9rZzYAwLv7sZg3OwtSzawWq9/ms9zbmfPsfBVnVmezWTbqtT/L5159rnZ7O3OO5sMqCwDwCe4W82a0KM0WqCNnRtmw24s5vfzZeu6NsmHUW52rdt5T+7Narvdy2W4v5vTyZ+rZKAcA8Em6i3kTy1K9Znbzs16z28tz4j5fI6Nsvm/qczXqrc5VO+/p9aOer6iHXO/Z7eU5cZ+vkZ3sqA4A8EmGi/lfcNWFzpIJAMBRFvMnsJgDAHCUxfzBrvrHAgAA12YxfzBLOQAAZ1jMH+iKfygAAPAXfH19A04xK7V3LmuGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                              </scg:List>
-                                            </uix:TargetAnchorable.Anchors>
-                                          </uix:TargetAnchorable>
-                                        </uix:NGetText.Target>
-                                        <uix:NGetText.Text>
-                                          <OutArgument x:TypeArguments="x:Object">[row.item("Company Number")]</OutArgument>
-                                        </uix:NGetText.Text>
-                                      </uix:NGetText>
-                                      <ui:InterruptibleWhile DisplayName="While" sap:VirtualizedContainerService.HintSize="412,748" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
-                                        <ui:InterruptibleWhile.Body>
-                                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,583" sap2010:WorkflowViewState.IdRef="Sequence_14">
-                                            <sap:WorkflowViewStateService.ViewState>
-                                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                              </scg:Dictionary>
-                                            </sap:WorkflowViewStateService.ViewState>
-                                            <ui:SendHotkey ClickBeforeTyping="{x:Null}" DelayBefore="{x:Null}" DelayBetweenKeys="{x:Null}" DelayMS="{x:Null}" EmptyField="{x:Null}" SendWindowMessages="{x:Null}" Activate="True" DisplayName="Send Hotkey 'BODY'" sap:VirtualizedContainerService.HintSize="334,154" sap2010:WorkflowViewState.IdRef="SendHotkey_1" Key=" " KeyModifiers="None" SpecialKey="False">
-                                              <ui:SendHotkey.Target>
-                                                <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="a046d4fa-dcd1-4bb1-9264-655f47c77b53" InformativeScreenshot="5486949ab1779910df9c914825eff893" Selector="&lt;webctrl tag='BODY' /&gt;">
-                                                  <ui:Target.TimeoutMS>
-                                                    <InArgument x:TypeArguments="x:Int32" />
-                                                  </ui:Target.TimeoutMS>
-                                                  <ui:Target.WaitForReady>
-                                                    <InArgument x:TypeArguments="ui:WaitForReady" />
-                                                  </ui:Target.WaitForReady>
-                                                </ui:Target>
-                                              </ui:SendHotkey.Target>
-                                            </ui:SendHotkey>
-                                            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[row.item(&quot;Company Number&quot;)]" />
-                                            <uix:NGetText ContinueOnError="True" DisplayName="Get Text Company Number" sap:VirtualizedContainerService.HintSize="334,166" sap2010:WorkflowViewState.IdRef="NGetText_1">
-                                              <uix:NGetText.Target>
-                                                <uix:TargetAnchorable BrowserURL="https://thebanks.eu/banks/14476" DesignTimeRectangle="971, 765, 86, 24" ElementType="Text" FriendlyName="'BR000356'" FullSelectorArgument="&lt;webctrl aaname='BR000356' parentid='overview' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='overview' tag='SPAN' type='' /&gt;" InformativeScreenshot="3f36d2fb074c82c02c6a98ae28fe548c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Bangkok Bank Public Company Ltd (United Kingdom) - Bank Profile' /&gt;" SearchSteps="FuzzySelector">
-                                                  <uix:TargetAnchorable.Anchors>
-                                                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
-                                                      <uix:Target DesignTimeRectangle="971, 734, 738, 19" FriendlyName="'Company Number'" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h5' idx='2' tag='H5' /&gt;" FuzzySelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;div&amp;gt;h5' type='' tag='H5' aaname='Company Number' check:text='Company Number' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAuYAAAAXCAYAAABHyIrGAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAKtSURBVHhe7dtLbuNADAXAOYvvf8cEvSDA0P2TYo8VuwoQIJGvqYGSBbOYf18AAMDLWcwBAOACLOYAAHABFnMAALgAizkAAFzAdDG/3W4/Lp5j5/u++vv7HQAAeK7uYh5LWF7EejUeY+e7vvq7+9kDADzX3WK+WsAsaI8X33T13V9p9e8DAOB3uov5ymxJi95OJt/nWpj1mlzPuVzvGWXzfdPr5Vro1bLd/iyX67NcM8rGfa6FWa/J9ZzL9Z6dbK6PMgAA7+7HYv6bpah3djQv6rN87TWjfFxZr9bMsrXXqzWj2sis1+R5o2yu53xPL1vzuVZ7zSgfV9arNbvZqNU6AMAnuVvMz1gtVbU3yx/pzbLNM/O72VE9q5nRnFDz1W72SG+Wbc7kwyoLAPAJHraYz9T+ahHb7a3mNDU/U+fV56r2etnZ+VDfU5+bVT87m62OzGlqfubobACAd/ffFvOcqc/Vbm81p6n5mTqvPle118vOzofee2bPvXx2NlsdmdPU/MzR2QAA785intR59bmqvd75HfVcGM0a5cPZbHVkTtPLz65QnwEAPtGp//xZc6szvfzszG5vNaep+Zk6rz5XvV49v2P0nlzP/VE+nM1WR+Y0Nb9rZzYAwLv7sZg3OwtSzawWq9/ms9zbmfPsfBVnVmezWTbqtT/L5159rnZ7O3OO5sMqCwDwCe4W82a0KM0WqCNnRtmw24s5vfzZeu6NsmHUW52rdt5T+7Narvdy2W4v5vTyZ+rZKAcA8Em6i3kTy1K9Znbzs16z28tz4j5fI6Nsvm/qczXqrc5VO+/p9aOer6iHXO/Z7eU5cZ+vkZ3sqA4A8EmGi/lfcNWFzpIJAMBRFvMnsJgDAHCUxfzBrvrHAgAA12YxfzBLOQAAZ1jMH+iKfygAAPAXfH19A04xK7V3LmuGAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
-                                                    </scg:List>
-                                                  </uix:TargetAnchorable.Anchors>
-                                                </uix:TargetAnchorable>
-                                              </uix:NGetText.Target>
-                                              <uix:NGetText.Text>
-                                                <OutArgument x:TypeArguments="x:Object">[row.item("Company Number")]</OutArgument>
-                                              </uix:NGetText.Text>
-                                            </uix:NGetText>
-                                          </Sequence>
-                                        </ui:InterruptibleWhile.Body>
-                                        <ui:InterruptibleWhile.Condition>
-                                          <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="string.IsNullOrEmpty(row.item(&quot;Company Number&quot;).ToString)" sap2010:WorkflowViewState.IdRef="VisualBasicValue`1_1" />
-                                        </ui:InterruptibleWhile.Condition>
-                                      </ui:InterruptibleWhile>
-                                      <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="412,91" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[row.item(&quot;Company Number&quot;)]" />
-                                    </Sequence>
+                                    <ui:GetValue ContinueOnError="True" DisplayName="Get Text  Company Number" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="GetValue_4">
+                                      <ui:GetValue.Target>
+                                        <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="99e95b4e-d34b-4f52-9f22-24c4f2b0ceea" InformativeScreenshot="9d14742ad34515c2ea149f884aaf208d" Selector="&lt;webctrl tag='TD' /&gt;">
+                                          <ui:Target.TimeoutMS>
+                                            <InArgument x:TypeArguments="x:Int32" />
+                                          </ui:Target.TimeoutMS>
+                                          <ui:Target.WaitForReady>
+                                            <InArgument x:TypeArguments="ui:WaitForReady" />
+                                          </ui:Target.WaitForReady>
+                                        </ui:Target>
+                                      </ui:GetValue.Target>
+                                      <ui:GetValue.Value>
+                                        <OutArgument x:TypeArguments="x:Object">[row.item("Company Number")]</OutArgument>
+                                      </ui:GetValue.Value>
+                                    </ui:GetValue>
                                   </ActivityAction>
-                                </uix:NApplicationCard.Body>
-                                <uix:NApplicationCard.TargetApp>
-                                  <uix:TargetApp Area="-1929, -9, 1938, 1098" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAAZSURBVDhPY/hPIRg1YNQAEBg1YBgY8P8/AF14/C6vXdhWAAAAAElFTkSuQmCC" InformativeScreenshot="8ff6ae7fdc1573ecbaef2a6cba27c638.png" Selector="&lt;html app='chrome.exe' url='https://thebanks.eu/banks/*' /&gt;" Url="https://thebanks.eu/banks/*" />
-                                </uix:NApplicationCard.TargetApp>
-                              </uix:NApplicationCard>
-                              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="488,106" sap2010:WorkflowViewState.IdRef="CloseWindow_2" InformativeScreenshot="9729575d9a59a2f42f02822eacc2aa41" WaitForReady="INTERACTIVE" />
+                                </ui:AnchorBase.Action>
+                                <ui:AnchorBase.AnchorProvider>
+                                  <ui:WaitUiElementAppear FoundElement="{x:Null}" WaitActive="{x:Null}" WaitVisible="{x:Null}" ContinueOnError="True" DisplayName="Find Element" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="WaitUiElementAppear_2">
+                                    <ui:WaitUiElementAppear.Target>
+                                      <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="26a1a19c-bb1a-43a2-97f8-330d204735db" InformativeScreenshot="5c4e76f7e1d9e8378493fe191e1dac4a" Selector="&lt;html app='chrome.exe' title='* - Identifiers' /&gt;&lt;webctrl tag='TABLE' idx='*' /&gt;&lt;webctrl tag='TD' aaname='Company Number ' /&gt;">
+                                        <ui:Target.TimeoutMS>
+                                          <InArgument x:TypeArguments="x:Int32" />
+                                        </ui:Target.TimeoutMS>
+                                        <ui:Target.WaitForReady>
+                                          <InArgument x:TypeArguments="ui:WaitForReady" />
+                                        </ui:Target.WaitForReady>
+                                      </ui:Target>
+                                    </ui:WaitUiElementAppear.Target>
+                                  </ui:WaitUiElementAppear>
+                                </ui:AnchorBase.AnchorProvider>
+                              </ui:AnchorBase>
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[row.item(&quot;Company Number&quot;)]" />
+                              <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="CloseWindow_2" InformativeScreenshot="9729575d9a59a2f42f02822eacc2aa41" WaitForReady="INTERACTIVE" />
                             </Sequence>
                           </ActivityAction>
                         </ui:BrowserScope.Body>
@@ -491,7 +474,7 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="830,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="United_Kingdom_Banks.xlsx">
+    <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="996,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="United_Kingdom_Banks.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
           <ActivityAction.Argument>
