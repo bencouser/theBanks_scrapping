@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="united_kingdom_scrape" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1028,4695" sap2010:WorkflowViewState.IdRef="united_kingdom_scrape_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="united_kingdom_scrape" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1028,4442" sap2010:WorkflowViewState.IdRef="united_kingdom_scrape_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="70">
       <x:String>System.Activities</x:String>
@@ -77,7 +77,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="united_kingdom_scrape" sap:VirtualizedContainerService.HintSize="1038,4630" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="united_kingdom_scrape" sap:VirtualizedContainerService.HintSize="1038,4377" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Default="[New System.Data.DataTable]" Name="ExtractDataTable" />
     </Sequence.Variables>
@@ -86,7 +86,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="996,776" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="996,775" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
@@ -135,7 +135,7 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table - Bank Type" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="996,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table - Bank Type" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="996,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_1" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="32">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
@@ -331,13 +331,13 @@
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
     <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Company Number" DataTable="[ExtractDataTable]" DisplayName="Add Data Column" sap:VirtualizedContainerService.HintSize="996,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_1" />
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="996,1646" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="996,1602" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="962,1525" sap2010:WorkflowViewState.IdRef="Sequence_9">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="962,1482" sap2010:WorkflowViewState.IdRef="Sequence_9">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:String" Name="name" />
             </Sequence.Variables>
@@ -354,31 +354,31 @@
                 <InArgument x:TypeArguments="x:String">[row.item(0).ToString]</InArgument>
               </Assign.Value>
             </Assign>
-            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="920,1333" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
+            <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="920,1290" sap2010:WorkflowViewState.IdRef="OpenBrowser_2" Url="https://thebanks.eu/banks-by-country/United-Kingdom">
               <ui:OpenBrowser.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="886,1231" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="886,1189" sap2010:WorkflowViewState.IdRef="Sequence_8">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="844,1139" sap2010:WorkflowViewState.IdRef="Sequence_7">
+                    <Sequence DisplayName="Web" sap:VirtualizedContainerService.HintSize="844,1097" sap2010:WorkflowViewState.IdRef="Sequence_7">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="802,1047" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ef7f2712c8df829a180a14536fbbb9a3" Selector="&lt;html app='chrome.exe' title='List of Banks in the United Kingdom' /&gt;">
+                      <ui:BrowserScope Browser="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Attach Browser" sap:VirtualizedContainerService.HintSize="802,1005" sap2010:WorkflowViewState.IdRef="BrowserScope_2" InformativeScreenshot="ef7f2712c8df829a180a14536fbbb9a3" Selector="&lt;html app='chrome.exe' title='List of Banks in the United Kingdom' /&gt;">
                         <ui:BrowserScope.Body>
                           <ActivityAction x:TypeArguments="x:Object">
                             <ActivityAction.Argument>
                               <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                             </ActivityAction.Argument>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,901" sap2010:WorkflowViewState.IdRef="Sequence_6">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="768,859" sap2010:WorkflowViewState.IdRef="Sequence_6">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="url" />
                               </Sequence.Variables>
@@ -421,7 +421,7 @@
                                   </ui:Target>
                                 </ui:Click.Target>
                               </ui:Click>
-                              <ui:AnchorBase AnchorPosition="Left" ContinueOnError="True" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,238" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
+                              <ui:AnchorBase AnchorPosition="Left" ContinueOnError="True" DisplayName="Anchor Base" sap:VirtualizedContainerService.HintSize="726,198" sap2010:WorkflowViewState.IdRef="AnchorBase_2">
                                 <ui:AnchorBase.Action>
                                   <ActivityAction x:TypeArguments="ui:Anchor">
                                     <ActivityAction.Argument>
@@ -459,7 +459,7 @@
                                   </ui:WaitUiElementAppear>
                                 </ui:AnchorBase.AnchorProvider>
                               </ui:AnchorBase>
-                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,93" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[row.item(&quot;Company Number&quot;)]" />
+                              <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="726,91" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[row.item(&quot;Company Number&quot;)]" />
                               <ui:CloseWindow Selector="{x:Null}" TimeoutMS="{x:Null}" UseWindow="{x:Null}" DisplayName="Close Window" sap:VirtualizedContainerService.HintSize="726,106" sap2010:WorkflowViewState.IdRef="CloseWindow_2" InformativeScreenshot="9729575d9a59a2f42f02822eacc2aa41" WaitForReady="INTERACTIVE" />
                             </Sequence>
                           </ActivityAction>
@@ -474,15 +474,31 @@
         </ActivityAction>
       </ui:ForEachRow.Body>
     </ui:ForEachRow>
-    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table - ABC Glitch" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="996,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_2" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table Cleaning Data" FilterRowsMode="Remove" sap:VirtualizedContainerService.HintSize="996,160" sap2010:WorkflowViewState.IdRef="FilterDataTable_4" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
             <ui:FilterOperationArgument.Column>
-              <InArgument x:TypeArguments="x:String">["Company Name"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["Company Number"]</InArgument>
             </ui:FilterOperationArgument.Column>
             <ui:FilterOperationArgument.Operand>
               <InArgument x:TypeArguments="x:String">["ABC INTERNATIONAL BANK PLC"]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">["Company Number"]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">["BIC "]</InArgument>
+            </ui:FilterOperationArgument.Operand>
+          </ui:FilterOperationArgument>
+          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
+            <ui:FilterOperationArgument.Column>
+              <InArgument x:TypeArguments="x:String">["Company Number"]</InArgument>
+            </ui:FilterOperationArgument.Column>
+            <ui:FilterOperationArgument.Operand>
+              <InArgument x:TypeArguments="x:String">["MFI ID "]</InArgument>
             </ui:FilterOperationArgument.Operand>
           </ui:FilterOperationArgument>
         </scg:List>
@@ -494,19 +510,19 @@
       </ui:FilterDataTable.SelectColumns>
     </ui:FilterDataTable>
     <ui:AddDataColumn x:TypeArguments="x:Object" AllowDBNull="{x:Null}" AutoIncrement="{x:Null}" Column="{x:Null}" DefaultValue="{x:Null}" MaxLength="{x:Null}" Unique="{x:Null}" ColumnName="Status" DataTable="[ExtractDataTable]" DisplayName="Add Data Column Status" sap:VirtualizedContainerService.HintSize="996,22" sap2010:WorkflowViewState.IdRef="AddDataColumn`1_2" />
-    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser Companies House" sap:VirtualizedContainerService.HintSize="996,978" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="https://find-and-update.company-information.service.gov.uk/company/04483430">
+    <ui:OpenBrowser CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" UiBrowser="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser Companies House" sap:VirtualizedContainerService.HintSize="996,976" sap2010:WorkflowViewState.IdRef="OpenBrowser_3" Url="https://find-and-update.company-information.service.gov.uk/company/04483430">
       <ui:OpenBrowser.Body>
         <ActivityAction x:TypeArguments="x:Object">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,876" sap2010:WorkflowViewState.IdRef="Sequence_17">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="452,875" sap2010:WorkflowViewState.IdRef="Sequence_17">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,784" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
+            <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[ExtractDataTable]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="410,783" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
                   <ActivityAction.Argument>
@@ -597,25 +613,6 @@
         </ActivityAction>
       </ui:OpenBrowser.Body>
     </ui:OpenBrowser>
-    <ui:FilterDataTable DataTable="[ExtractDataTable]" DisplayName="Filter Data Table Keep Active" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="996,162" sap2010:WorkflowViewState.IdRef="FilterDataTable_3" OutputDataTable="[ExtractDataTable]" SelectColumnsMode="Keep">
-      <ui:FilterDataTable.Filters>
-        <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
-          <ui:FilterOperationArgument BooleanOperator="And" Operator="EQ">
-            <ui:FilterOperationArgument.Column>
-              <InArgument x:TypeArguments="x:String">["Status"]</InArgument>
-            </ui:FilterOperationArgument.Column>
-            <ui:FilterOperationArgument.Operand>
-              <InArgument x:TypeArguments="x:String">["Active"]</InArgument>
-            </ui:FilterOperationArgument.Operand>
-          </ui:FilterOperationArgument>
-        </scg:List>
-      </ui:FilterDataTable.Filters>
-      <ui:FilterDataTable.SelectColumns>
-        <scg:List x:TypeArguments="InArgument" Capacity="4">
-          <x:Null />
-        </scg:List>
-      </ui:FilterDataTable.SelectColumns>
-    </ui:FilterDataTable>
     <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope" sap:VirtualizedContainerService.HintSize="996,288" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_1" InstanceCachePeriod="3000" WorkbookPath="United_Kingdom_Banks.xlsx">
       <ui:ExcelApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WorkbookApplication">
