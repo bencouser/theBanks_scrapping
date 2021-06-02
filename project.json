@@ -3,6 +3,7 @@
   "description": "Scrapping from thebanks",
   "main": "Main.xaml",
   "dependencies": {
+    "System.Xml.ReaderWriter": "[4.3.0]",
     "UiPath.Excel.Activities": "[2.10.4]",
     "UiPath.Mail.Activities": "[1.10.4]",
     "UiPath.System.Activities": "[21.4.0]",
